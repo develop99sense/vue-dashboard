@@ -1,0 +1,84 @@
+.wd-step__wrapper {
+  list-style: none;
+}
+li.wd-step__item {
+  a {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 15px;
+    margin: 0;
+    border-radius: 0; 
+    text-decoration: none;
+    color: #2e353c;    
+    background: #eaf8fb !important;
+    .wd-step__subtitle {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 16px;
+      opacity: .75;
+    }
+
+    &.active {
+      background: #2ABCD6 !important;
+      color: #fff !important;
+      .number {
+        color: #fff !important;
+      }
+    }
+  
+    &.done {
+      .number::before {
+        content: '\f00c';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 40px;
+        color: #fff;
+      }
+    }
+    
+  }
+
+}
+
+.wd-form__footer {
+  background: #D6F1F7 !important;
+  padding: 30px 60px !important;
+  height: 120px;
+}
+
+.sw-btn-next{
+  background: #327FA3 !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  padding: 14px 38px !important;
+  border-radius: 24px !important;
+  margin: 10px;
+}
+
+.sw-btn-prev{
+  color: #327FA3 !important;
+  background: #ffffff !important;
+  font-size: 16px !important;
+  padding: 14px 38px !important;
+  border-radius: 24px !important;
+  margin: 10px;
+}
+
+.input-error {
+  border: 1px solid #ff0000;
+}
+.vdp-datepicker input{
+  border: 1px solid #c1c1c1;
+  background-color: #f8f8f8;
+  border-radius: 22px;
+  padding: 14px 24px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  width: 440px;
+}

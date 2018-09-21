@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="../assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/font-awesome/5.0/css/fontawesome-all.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/animate/animate.min.css" rel="stylesheet" />
+	<link href="../assets/css/default/style.min.css" rel="stylesheet" />
+	<link href="../assets/css/default/style-responsive.min.css" rel="stylesheet" />
+	<link href="../assets/css/default/theme/default.css" rel="stylesheet" id="theme" />
+	<link href="../assets/css/dashboard.css" rel="stylesheet"/>
+	<link href="../assets/css/form.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL STYLE (form) ================== -->
+	<link href="../assets/plugins/jquery-smart-wizard/src/css/smart_wizard.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL CSS STYLE (dashboard) ================== -->
+	<link href="../assets/plugins/jquery-jvectormap/jquery-jvectormap.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
+	<link href="../assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+	<link href="../assets/plugins/nvd3/build/nv.d3.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL CSS STYLE  (admin) ================== -->
+	<link href="../assets/plugins/jquery-jvectormap/jquery-jvectormap.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
+	<link href="../assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+	<link href="../assets/plugins/nvd3/build/nv.d3.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+
+	<!-- ================== BEGIN BASE JS (form) ================== -->
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.135.0.min.js"></script>
+	<script src="../assets/js/aws-cognito-sdk.min.js"></script>
+	<script src="../assets/js/amazon-cognito-identity.min.js"></script>
+	<script src="../assets/js/cognito.js"></script>
+	<script src="../assets/plugins/pace/pace.min.js"></script>
+
+	<!-- ================== END BASE JS ================== -->
+
+</head>
+
+<body>
+  <!-- begin #page-loader -->
+  <!-- <div id="page-loader" class="fade show"><span class="spinner"></span></div> -->
+	<!-- end #page-loader -->
+
+  <div id="page-container" class="fade page-sidebar-fixed page-header-fixed show">
+    <navbar :inverted="false"></navbar>
+    <sidebar></sidebar>
+    <router-view></router-view>
+    <mainfooter></mainfooter>
+  </div>
+
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="https://js.stripe.com/v3/"></script>
+  <script type="text/javascript">
+    var stripe = Stripe('pk_test_taaJ1QRDsbw7p3dKPPmnmwhR'); // use your test publishable key
+    var elements = stripe.elements();
+  </script>
+	<script src="../assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../assets/plugins/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="../../assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="../../assets/crossbrowserjs/respond.min.js"></script>
+		<script src="../../assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/plugins/js-cookie/js.cookie.js"></script>
+	<script src="../assets/js/theme/default.min.js"></script>
+	<!-- <script src="../assets/js/apps.min.js"></script> -->
+	<script src="../assets/js/apps.js"></script>
+
+	<!-- =============== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS (form) ================== -->
+	<script src="../assets/plugins/jquery-smart-wizard/src/js/jquery.smartWizard.js"></script>
+	<script src="../assets/js/demo/form-wizards.demo.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	<!-- <script src="../assets/js/form.js"></script> -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS (dashboard) ================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js"></script>
+  <script src="../assets/plugins/nvd3/build/nv.d3.js"></script>
+  <!-- <script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js"></script>
+  <script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
+  <script src="../assets/plugins/bootstrap-calendar/js/bootstrap_calendar.js"></script>
+  <script src="../assets/plugins/gritter/js/jquery.gritter.js"></script>
+	<!-- <script src="../../assets/js/demo/dashboard-v2.min.js"></script> -->
+	<script src="../assets/js/demo/map-vector.demo.min.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS (admin) ================== -->
+	<!-- ================== END PAGE LEVEL JS ================== -->
+
+	<script>
+		$(document).ready(function() {
+			App.init();
+			FormWizard.init();
+
+
+		});
+	</script>
+
+</body>
+
+</html>

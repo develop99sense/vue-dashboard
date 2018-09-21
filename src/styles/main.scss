@@ -1,0 +1,14 @@
+// common
+@import "common/_style";
+// foundation
+@import "foundation/_normalize";
+// components
+@import "components/containers/App/_style";
+@import "components/containers/Form/_style";
+
+@import "components/modules/Navbar/_style";
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
